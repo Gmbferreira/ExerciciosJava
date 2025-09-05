@@ -1,0 +1,10 @@
+<diagram program="umletino" version="15.1"><zoom_level>10</zoom_level><element><id>UMLClass</id><coordinates><x>340</x><y>80</y><w>200</w><h>150</h></coordinates><panel_attributes>Aluno
+-
+-String: nome
+-int: MATRICULA
+-int: QNTPROVAS{read_only}
+-double[]: listaAvaliacoes
+-double: reavaliacao
+-
++notaFinal(): double
++situacao(): string</panel_attributes><additional_attributes></additional_attributes></element></diagram>

@@ -4,14 +4,15 @@ import java.util.LinkedList;
 import java.util.List;
 
 public class Compra {
-    private static final double FRETE_FIXO = 15.0d;
     private static final int QTD_DESCONTO = 10;
     private List<Vinho> vinhos;
     private int qtd_itens;
+    private Cliente cliente;
     
-    public Compra() {
+    public Compra(Cliente cliente) {
         this.vinhos = new LinkedList<>();
         this.qtd_itens = 0;
+        this.cliente = cliente;
     }
 
     private double valorVinhos(){
@@ -40,6 +41,7 @@ public class Compra {
     }
 
     public double valorTotal(){
-        return valorVinhos() + FRETE_FIXO;  
+        double valorCompra = valorVinhos();
+        return valorVinhos() + cliente.calcularValorCompra(valorCompra);  
     }
 }

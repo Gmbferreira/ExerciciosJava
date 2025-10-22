@@ -1,1 +1,73 @@
-<diagram program="umletino" version="15.1"><zoom_level>10</zoom_level></diagram>
+<diagram program="umletino" version="15.1"><zoom_level>11</zoom_level><help_text>Space for diagram notes</help_text><element><id>UMLClass</id><coordinates><x>385</x><y>176</y><w>330</w><h>264</h></coordinates><panel_attributes>/Cliente/
+-
+-nome : String
+-cpf  : String
+-senha  : String
+-email  : String
+#comprasSequenciais : double
+#mensalidade : double
+_#VALOR_MENSALIDADE : double = 40{readOnly}_
+#frete : double
+
+-
+/+calcularMensalidade(): double/
+/+calcularFrete(double valorCompra): double/
+/+calcularValorCompra(double valorCompra) : double/
+/+calcularDesconto() : double/
+
+
+
+
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>0</x><y>649</y><w>330</w><h>165</h></coordinates><panel_attributes>ClienteCadastrado
+-
+_-TAXA_FRETE : double = 0.1{readOnly}_
+_- MAX_FRETE: double = 12{readOnly}_
+
+-
++calcularMensalidade(): double
++calcularFrete(double valorCompra): double
++calcularValorCompra(double valorCompra) : double
++calcularDesconto() : double
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>792</x><y>649</y><w>330</w><h>165</h></coordinates><panel_attributes>ClienteExplorador
+-
+_-TAXA_FRETE : double = 10{readOnly}_
+_- DESCONTO_FIXO: double = 0.1{readOnly}_
+
+-
++calcularMensalidade(): double
++calcularFrete(double valorCompra): double
++calcularValorCompra(double valorCompra) : double
++calcularDesconto() : double
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>385</x><y>649</y><w>363</w><h>165</h></coordinates><panel_attributes>ClienteEspecialista
+-
+_-TAXA_FRETE : double = 10{readOnly}_
+_- DESCONTO_FIXO: double = 0.15{readOnly}_
+_- MODIFICADOR_ESPECIALISTA: double = 1.6{readOnly}_
+
+-
++calcularMensalidade(): double
++calcularFrete(double valorCompra): double
++calcularValorCompra(double valorCompra) : double
++calcularDesconto() : double
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>858</x><y>242</y><w>264</w><h>187</h></coordinates><panel_attributes>Compra
+-
+_-QTD_DESCONTO : int = 10{readOnly}_
+-vinhos : Vinho[]
+-qtd_itens : int
+-cliente : Cliente
+
+-
++valorVinhos() : double
++addVinho(Vinho vinho) : int
++valorTotal() : double</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>847</x><y>0</y><w>264</w><h>121</h></coordinates><panel_attributes>Vinho
+-
+-nome : String
+-preco : double
+-pais : String
+-ano : int
+-</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>550</x><y>429</y><w>33</w><h>242</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;-</panel_attributes><additional_attributes>10;10;10;200</additional_attributes></element><element><id>Relation</id><coordinates><x>209</x><y>429</y><w>374</w><h>242</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;-</panel_attributes><additional_attributes>320;10;320;120;10;200</additional_attributes></element><element><id>Relation</id><coordinates><x>550</x><y>429</y><w>407</w><h>242</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;-</panel_attributes><additional_attributes>10;10;10;120;350;200</additional_attributes></element><element><id>Relation</id><coordinates><x>704</x><y>297</y><w>176</w><h>55</h></coordinates><panel_attributes>lt=&lt;-
+m1=1
+m2=0...n
+</panel_attributes><additional_attributes>10;20;140;20</additional_attributes></element><element><id>Relation</id><coordinates><x>979</x><y>110</y><w>44</w><h>154</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;&lt;-
+m1=
+m2=*</panel_attributes><additional_attributes>10;120;10;10</additional_attributes></element></diagram>
